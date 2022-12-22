@@ -5,7 +5,6 @@ import Navbar from '../Layout/Navbar'
 
 
 
-
 function Home() {
   return (
   <div className='bg-primary w-full overflow-hidden'>
@@ -27,7 +26,7 @@ function Home() {
         title= "Moderação"
         description= 'Mutar, Remover e até Banir nunca foi tão fácil! Esses e muitos outros comandos para administrar seu servidor perfeitamente e com muita facilidade!'
         clickText= 'Veja os Comandos!'
-        img= '/src/assets/direitoBranco.png'
+        img= '/public/direitoBranco.png'
         path='mod'
         altImg= 'direito'
         />
@@ -36,7 +35,7 @@ function Home() {
         title= "Sistema de Level"
         description= 'Sistema de level e rank global para todos os meus usuários ou apenas para o seu servidor! Converse com seus amigos e ganhem pontos de xp para subir de nível e liberar novos temas para o seu perfil ou até comandos.'
         clickText= 'Saiba mais!'
-        img= '/src/assets/up.png'
+        img= '/public/up.png'
         path='level'
         altImg= 'level'
         />
@@ -45,7 +44,7 @@ function Home() {
         title= "Totalmente Configurável"
         description= 'Você pode me configurar do jeito que voce quiser! setar canais de comando, setar canal de log adm, bloquear comandos em chat específico, bloquear um usuário ou cargo de usar um comando específico e ainda um pouco mais!'
         clickText= 'Veja Como!'
-        img= '/src/assets/config.png'
+        img= '/public/config.png'
         path='config'
         altImg= 'config'
         />
