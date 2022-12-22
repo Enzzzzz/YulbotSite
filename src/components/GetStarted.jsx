@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from '../style'
 import { arrowUp } from '../assets'
 
 const openInNewTab = (url) => {
@@ -10,14 +9,14 @@ const openInNewTab = (url) => {
 const GetStarted = () => (
   
 
-    <div className={`${styles.flexCenter} hover:scale-[103%] hover:shadow-lg hover:shadow-purple-400/40 w-[140px] h-[140px] rounded-full bg-gradient-to-t from-purple-500 to-white p-[2px] cursor-pointer`}>
-      <div className={`${styles.flexCenter} flex-col bg-primary w-[100%] h-[100%] rounded-full`}
+    <div className={'flex justify-center items-center hover:scale-[103%] hover:shadow-lg hover:shadow-purple-400/40 w-[140px] h-[140px] rounded-full bg-gradient-to-t from-purple-500 to-white p-[2px] cursor-pointer'}>
+      <div className={`flex justify-center items-center flex-col bg-primary w-[100%] h-[100%] rounded-full`}
       onClick={() => openInNewTab('https://discord.com/api/oauth2/authorize?client_id=1009242817429786744&permissions=1643260603510&scope=bot')}
       >
         <p className='font-poppins font-medium text-[18px] leading-[23px]'>
             <span className='text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-white'>Comece</span>
         </p>
-        <div className={`${styles.flexStart} flex-row`}>
+        <div className={`flex justify-center items-start flex-row`}>
           <p className='font-poppins font-medium text-[18px] leading-[23px]'>
             <span className='text-transparent bg-clip-text bg-gradient-to-t from-purple-500 to-white mr-1'>Agora!</span>
           </p>

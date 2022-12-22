@@ -8,16 +8,16 @@ import {
 } from "react-router-dom";
   
 
-import Home from "./components/Home";
-import Comandos from "./components/Comandos";
+import Home from "./routes/Home";
+import Comandos from "./routes/Comandos";
   
 function App() {
   return (
     <>
       <Router>
         <Switch>
-          <Route exact path="/" element={Home} />
-          <Route path="/comandos" element={Comandos} />
+          <Route exact path="/" component={Home} />
+          <Route path="/comandos" component={Comandos} />
           <Redirect to="/" />
         </Switch>
       </Router>

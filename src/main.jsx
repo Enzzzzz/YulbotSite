@@ -1,9 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Comandos, Configuracao, Sobre, Suporte } from "./components";
-import Home from "./components/Home";
-import "./index.css";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Comandos from './routes/Comandos'
+import Configuracao from './routes/Configuracao'
+import Sobre from './routes/Sobre'
+import Suporte from './routes/Suporte'
+import Home from './routes/Home'
+import './index.css'
+
 
 const router = createBrowserRouter([
   {
@@ -16,23 +20,24 @@ const router = createBrowserRouter([
   },
   {
     path: "/comandos",
-    element: <Comandos />,
+    element: <Comandos />
   },
   {
     path: "/config",
-    element: <Configuracao />,
+    element: <Configuracao />
   },
   {
-    path: "/sobre",
-    element: <Sobre />,
+    path: '/sobre',
+    element: <Sobre />
   },
   {
-    path: "/suporte",
-    element: <Suporte />,
-  },
+    path: '/suporte',
+    element: <Suporte />
+  }
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>

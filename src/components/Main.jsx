@@ -1,6 +1,5 @@
 import React from 'react'
-import styles from '../style'
-import { discount, robot, robot2 } from '../assets'
+import { robot2 } from '../assets'
 import GetStarted from './GetStarted'
 
 const openInNewTab = (url) => {
@@ -9,15 +8,15 @@ const openInNewTab = (url) => {
 }
 
 const Main = () => (
-  <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY}`}>
-    <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
+  <section id="home" className={`flex md:flex-row flex-col sm:py-16 py-6`}>
+    <div className={`flex-1 flex justify-center items-start flex-col xl:px-0 sm:px-16 px-6`}>
       <div className='flex flex-row items-center py-[6px] px-4 bg-gradient-to-br from-purple-500/40 hover:scale-[105%] rounded-[10px] mb-2'>
         <img src={'https://cdn-icons-png.flaticon.com/512/992/992651.png'} 
         alt='addme'
         className='cursor-pointer w-[15px] h-[15px]'
         onClick={() => openInNewTab('https://discord.com/api/oauth2/authorize?client_id=1009242817429786744&permissions=1643260603510&scope=bot')}
         />
-        <p className={`${styles.paragraph} ml-2 cursor-pointer` }
+        <p className={`font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] ml-2 cursor-pointer` }
         onClick={() => openInNewTab('https://discord.com/api/oauth2/authorize?client_id=1009242817429786744&permissions=1643260603510&scope=bot')}>
           <span >Me Adicione</span>
           <span className='text-white font-bold'> AGORA!!</span>
@@ -38,10 +37,10 @@ const Main = () => (
       <h1 className='font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100px] leading-[75px] w-full'>DiscordBot</h1>
 
 
-      <p className={`${styles.paragraph} max-w-[470px] mt-5`}>O meu criador está me desenvolvendo com todas as funções possíveis para que você possa utilizar em qualquer tipo de servidor que você tenha ou esteja criando!</p>
+      <p className={`font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] max-w-[470px] mt-5`}>O meu criador está me desenvolvendo com todas as funções possíveis para que você possa utilizar em qualquer tipo de servidor que você tenha ou esteja criando!</p>
     </div>
 
-    <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
+    <div className={`flex-1 flex justify-center items-center md:my-0 my-10 relative`}>
       <img src={robot2} alt='billing'
       className='w-[100%] h-[100%] relative z-[5]' />
 
@@ -52,7 +51,7 @@ const Main = () => (
 
     </div>
 
-    <div className={`ss:hidden ${styles.flexCenter}`}>
+    <div className={`ss:hidden flex justify-center items-center`}>
         <GetStarted />
     </div>
   </section>
