@@ -7,9 +7,9 @@ import Navbar from '../Layout/Navbar'
 
 function Home() {
 
-  const direito = '/public/direitoBranco.png'
-  const config = '/public/config.png'
-  const up = '/public/up.png'
+  const direito = '../../public/direitoBranco.png'
+  const config = '../../public/config.png'
+  const up = '../../public/up.png'
 
   return (
   <div className='bg-primary w-full overflow-hidden'>
