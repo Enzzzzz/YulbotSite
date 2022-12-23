@@ -13,10 +13,7 @@ function Configuracao() {
         <div>
           <Soon />
         </div>
-  
     </div>
-
-
 )}
 
 export default Configuracao
