@@ -7,6 +7,7 @@ import Sobre from './routes/Sobre'
 import Suporte from './routes/Suporte'
 import Home from './routes/Home'
 import './index.css'
+import RPG from './routes/RPG'
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: '/suporte',
     element: <Suporte />
+  },
+  {
+    path: '/rpg',
+    element: <RPG />
   }
 ]);
 

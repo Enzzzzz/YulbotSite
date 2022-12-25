@@ -4,6 +4,10 @@ export const navLinks = [
     title: "Comandos",
   },
   {
+    id: "rpg",
+    title: "RPG",
+  },
+  {
     id: "config",
     title: "Configuração",
   },
