@@ -16,7 +16,7 @@ function Sobre() {
           <div className='h-[100%] w-[200%] shadow-purple-400/50 shadow-lg hover:shadow-xl hover:shadow-purple-400/50 flex flex-col sm:flex-row items-center bg-gradient-to-r from-purple-900/50 rounded-[10px] mb-2 border-purple-700 border'>
             <div className='flex flex-col scale-100 md:scale-[95%]'>
               <p className={`font-poppins  text-dimWhite  leading-[30.8px] ml-4 mt-8 text-lg sm:text-xl md:text-3xl ` }>
-                <span className=' text-white font-bold'>Sobre min</span>
+                <span className=' text-white font-bold'>Sobre mim</span>
               </p>
                 <p className={`font-poppins text-dimWhite leading-[30.8px] ml-4 mr-4 md:mr-12 mb-4 py-4 flex text-xs sm:text-lg md:text-xl flex-col` }>
                   Fui criada no dia 16 de Agosto de 2022 por Enzzzzz#6007 com o objetivo de facilitar a vida de das pessoas em um servidor privado no discord, Recebendo novos comandos de acordo com suas necessidades. Depois de um tempo comecei a receber comandos que outras pessoas além desse grupo  poderiam precisar um dia. Agora toda vez que surge uma nova idéia ou uma nova sugestão meu dono se esforça e tenta de todas as formas possíveis adicionar e resolver os meus erros para que todos possam utilizar meus serviços sem nenhum problema!
