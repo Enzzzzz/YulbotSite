@@ -8,6 +8,10 @@ import { navLinks } from '../constants';
 const Navbar = () => {
 
   const [toggle, setToggle] = useState(false)
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+    if (newWindow) newWindow.opener = null
+  }
 
   return (
     <div className='w-full flex py-1 justify-between items-center navbar'>
@@ -27,9 +31,15 @@ const Navbar = () => {
             <a href={`/${nav.id}`}>
               {nav.title}
             </a>
+            
 
           </li>
+          
         ))}
+        <p className={`font-poppins font-nome cursor-pointer text-[16px] mr-0 text-white  hover:text-purple-300`}
+        onClick={() => openInNewTab('https://discord.gg/PV25tj6HTs')}>
+          Suporte
+        </p>
       </ul>
 
       <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -55,6 +65,10 @@ const Navbar = () => {
 
           </li>
         ))}
+        <p className={`font-poppins font-nome cursor-pointer text-[16px] mr-0 text-white  hover:text-purple-300`}
+        onClick={() => openInNewTab('https://discord.gg/PV25tj6HTs')}>
+          Suporte
+        </p>
       </ul> 
         </div>
       </div>  
