@@ -9,7 +9,7 @@ const openInNewTab = (url) => {
 const GetStarted = () => (
   
 
-    <div className={'flex justify-center items-center hover:scale-[103%] hover:shadow-lg hover:shadow-purple-400/40 w-[140px] h-[140px] rounded-full bg-gradient-to-t from-purple-500 to-white p-[2px] cursor-pointer'}>
+    <div className={'flex justify-center items-center transform transform-all duration-200 hover:scale-[103%] hover:shadow-lg hover:shadow-purple-400/40 w-[140px] h-[140px] rounded-full bg-gradient-to-t from-purple-500 to-white p-[2px] cursor-pointer'}>
       <div className={`flex justify-center items-center flex-col bg-primary w-[100%] h-[100%] rounded-full`}
       onClick={() => openInNewTab('https://discord.com/api/oauth2/authorize?client_id=1009242817429786744&permissions=1643260603510&scope=bot')}
       >

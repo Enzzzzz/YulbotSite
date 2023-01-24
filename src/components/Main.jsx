@@ -9,7 +9,7 @@ const openInNewTab = (url) => {
 const Main = () => (
   <section id="home" className={`flex md:flex-row flex-col sm:py-16 py-6`}>
     <div className={`flex-1 flex justify-center items-start flex-col xl:px-0 sm:px-16 px-6`}>
-      <div className='flex flex-row items-center py-[6px] px-4 bg-gradient-to-br from-purple-500/40 hover:scale-[105%] rounded-[10px] mb-2'>
+      <div className='flex flex-row items-center py-[6px] px-4 bg-gradient-to-br transform transform-all duration-200 from-purple-500/40 hover:scale-[105%] rounded-[10px] mb-2'>
         <img src={'https://cdn-icons-png.flaticon.com/512/992/992651.png'} 
         alt='addme'
         className='cursor-pointer w-[15px] h-[15px]'
