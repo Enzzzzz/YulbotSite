@@ -6,7 +6,7 @@ const Footer = () => {
     if (newWindow) newWindow.opener = null;
   };
   return (
-    <div className="w-full flex py-4 mt-4 border border-purple-500 h-40">
+    <div className="w-full flex py-4 mt-4 shadow-inner shadow-purple-400/50 border transform transform-all duration-200 border-purple-500/80 hover:shadow-purple-400/90 h-40">
       <div className="flex w-full flex-row">
         <div className="flex w-full flex-col">
           <a href='/'>

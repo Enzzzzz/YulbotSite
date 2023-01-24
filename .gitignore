@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 .expo/README.md
 .expo/settings.json
+src/routes/Comandos2.jsx
+src/Data/commands.json
+src/components/commandList.js
