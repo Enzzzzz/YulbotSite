@@ -14,11 +14,11 @@ const Navbar = () => {
   }
 
   return (
-    <div className='w-full flex py-1 justify-between items-center navbar'>
+    <div className='w-full flex py-3 justify-between items-center navbar'>
       <ul>
         <li>
             <a href='/'>
-              <img src={logo2} alt='yulhome' className='cursor-pointer hover:scale-150 scale-125 w-[100px] h-[100px]' />
+              <img src='/LogoBranco.png' alt='yulhome' className='cursor-pointer transform duration-200 hover:scale-150 scale-125 w-24' />
             </a>
         </li>
       </ul>

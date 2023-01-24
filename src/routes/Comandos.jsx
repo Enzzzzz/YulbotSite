@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Layout/Footer";
 import Navbar from "../Layout/Navbar";
 
 function Comandos() {
@@ -539,6 +540,11 @@ function Comandos() {
           </div>
         </div>
       </div>
+      <div className={`sm:px-16 px-6`}>
+          <div>
+            <Footer />
+          </div>
+        </div>
     </div>
   );
 }

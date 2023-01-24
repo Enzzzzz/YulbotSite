@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../Layout/Navbar'
 import { oniBranco } from '../assets'
+import Footer from '../Layout/Footer'
 
 function Sobre() {
     return (
@@ -31,6 +32,11 @@ function Sobre() {
         </div>
         
       </div>
+      <div className={`sm:px-16 px-6`}>
+          <div>
+            <Footer />
+          </div>
+        </div>
     </div>
 )}
 

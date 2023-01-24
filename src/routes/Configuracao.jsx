@@ -1,5 +1,6 @@
 import React from 'react'
 import Soon from '../components/Soon'
+import Footer from '../Layout/Footer'
 import Navbar from '../Layout/Navbar'
 
 function Configuracao() {
@@ -12,6 +13,11 @@ function Configuracao() {
         </div>
         <div>
           <Soon />
+        </div>
+        <div className={`sm:px-16 px-6`}>
+          <div>
+            <Footer />
+          </div>
         </div>
     </div>
 )}

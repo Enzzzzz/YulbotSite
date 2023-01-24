@@ -2,6 +2,7 @@ import Main from '../components/Main'
 import FeatureHomeRight from '../components/FeatureRight'
 import FeatureHomeLeft from '../components/FeatureLeft'
 import Navbar from '../Layout/Navbar'
+import Footer from '../Layout/Footer'
 
 
 
@@ -51,6 +52,13 @@ function Home() {
         />
       </div>
     </div>
+
+    <div className={`sm:px-16 px-6`}>
+      <div>
+        <Footer />
+      </div>
+    </div>
+
   </div>
 )};
 
