@@ -24,18 +24,21 @@ const Footer = () => {
         </div>
         <div className="flex w-full flex-col">
           <div className="flex-row">
+            
             <p className="text-white text-xs md:text-lg xl:text-xl font-poppins cursor-pointer font-semibold mt-2 ml-6 md:ml-16 xl:ml-20 hover:text-purple-300 transform transform-all duration-200 hover:translate-x-4">
-              Contato
+              <img src='/contact.png' className="w-4 md:w-6 xl:w-7 mr-1 inline opacity-70" />
+                Contato
             </p>
           </div>
           <p
             className="text-white text-xs md:text-lg xl:text-xl font-poppins cursor-pointer font-semibold ml-6 md:ml-16 xl:ml-20 hover:text-purple-300 transform transform-all duration-200 hover:translate-x-4"
             onClick={() => openInNewTab("https://github.com/Enzzzzz")}
-          >
+          ><img src='/Github.png' className="w-4 md:w-6 xl:w-7 mr-1 inline " />
             Github
           </p>
           <p className="text-white text-xs md:text-lg xl:text-xl font-poppins cursor-pointer font-semibold ml-6 md:ml-16 xl:ml-20 hover:text-purple-300 transform transform-all duration-200 hover:translate-x-4">
-            Enzzzzz#6007
+          <img src='/Discord.png' className="scale-90 w-4 md:w-6 xl:w-7 mr-1 inline " />
+            Discord
           </p>
         </div>
         <div className="flex w-full flex-col">
