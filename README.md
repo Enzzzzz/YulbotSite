@@ -1,6 +1,5 @@
 # Yulbot Website
 
-![Yulbot Website Logo]()
 <img src="image.png" alt="img">
 
 <div>
