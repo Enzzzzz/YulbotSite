@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import Soon from '../components/Soon';
 import Footer from '../Layout/Footer';
 import Navbar from '../Layout/Navbar';
