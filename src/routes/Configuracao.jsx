@@ -28,16 +28,9 @@ function Configuracao() {
       js.src = "https://connect.facebook.net/en_US/sdk.js";
       fjs.parentNode.insertBefore(js, fjs);
     })(document, "script", "facebook-jssdk");
-    // Função para lidar com o status de login
-    function statusChangeCallback(response) {
+     // Função para lidar com o status de login
+     function statusChangeCallback(response) {
       // Sua lógica de tratamento de resposta aqui
-    }
-  
-    // Função para verificar o status de login ao carregar a página
-    function checkLoginStatus() {
-      FB.getLoginStatus(function (response) {
-        statusChangeCallback(response);
-      });
     }
   
     // Executar a função quando a página é carregada
@@ -45,6 +38,13 @@ function Configuracao() {
       checkLoginStatus();
     };
   }, []);
+
+  // Função para verificar o status de login ao carregar a página
+  function checkLoginStatus() {
+    FB.getLoginStatus(function (response) {
+      statusChangeCallback(response);
+    });
+  }
 
   return (
     <div className="bg-primary w-full overflow-hidden">
