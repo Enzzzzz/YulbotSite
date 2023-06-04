@@ -5,13 +5,15 @@ import Navbar from '../Layout/Navbar';
 
 function Configuracao() {
   useEffect(() => {
-     function statusChangeCallback(response) {
-    }
+     
 
     window.onload = function () {
       checkLoginStatus();
     };
   }, []);
+
+  function statusChangeCallback(response) {
+  }
 
   function checkLoginStatus() {
     FB.getLoginStatus(function (response) {
