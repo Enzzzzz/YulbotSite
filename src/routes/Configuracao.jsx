@@ -13,6 +13,7 @@ function Configuracao() {
   }, []);
 
   function statusChangeCallback(response) {
+    console.log(response);
   }
 
   function checkLoginStatus() {
@@ -31,7 +32,7 @@ function Configuracao() {
 
       <div id="login-section">
         <h2>Fazer login</h2>
-        <button onClick={checkLoginStatus} className='bg-white text-purple-500'>Fazer login</button>
+        <button onClick={checkLoginStatus} className='bg-orange-700 text-purple-500'>Fazer login</button>
       </div>
 
       <div>
