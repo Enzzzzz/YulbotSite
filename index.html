@@ -29,6 +29,9 @@
         fjs.parentNode.insertBefore(js, fjs);
       })(document, "script", "facebook-jssdk");
 
+      function statusChangeCallback(response) {
+  // Sua lógica de tratamento de resposta aqui
+}
       // Função para verificar o status de login ao carregar a página
       function checkLoginStatus() {
         FB.getLoginStatus(function (response) {
