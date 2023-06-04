@@ -22,12 +22,7 @@ function Configuracao() {
         </div>
       </div>
 
-      <div id="login-section">
-      <fb:login-button 
-  scope="public_profile,email"
-  onlogin="checkLoginState();">
-</fb:login-button>
-      </div>
+      <div className="fb-login-button" scope="public_profile,email" onlogin="checkLoginStatus();"></div>
 
       <div>
         <Soon />
