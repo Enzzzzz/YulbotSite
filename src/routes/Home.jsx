@@ -13,14 +13,6 @@ function Home() {
         </div>
       </div>
 
-      <div id="login-section">
-        <h2>Fazer login</h2>
-        <fb:login-button
-          scope="public_profile,email"
-          onlogin="checkLoginState();"
-        ></fb:login-button>
-      </div>
-
       <div className={`bg-primary flex justify-center items-start`}>
         <div className={`xl:max-w-[1280px] w-full`}>
           <Main />
