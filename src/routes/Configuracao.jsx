@@ -29,7 +29,7 @@ function Configuracao() {
 
       <div id="login-section">
         <h2>Fazer login</h2>
-        <button onClick={checkLoginStatus}>Fazer login</button>
+        <button onClick={checkLoginStatus} className='bg-white text-purple-500'>Fazer login</button>
       </div>
 
       <div>
