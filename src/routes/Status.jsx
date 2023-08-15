@@ -14,7 +14,7 @@ function Status() {
     fetchData();
     const interval = setInterval(() => {
       fetchData();
-    }, 30000);
+    }, 300000);
     fetchData();
     return () => {
       clearInterval(interval);
