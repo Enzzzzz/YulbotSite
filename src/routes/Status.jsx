@@ -3,7 +3,7 @@ import Footer from "../Layout/Footer";
 import axios from "axios";
 import React, { useState, useEffect } from 'react'
 
-function Stats() {
+function Status() {
   const [changesInLast24Hours, setChangesInLast24Hours] = useState({
     YulBotV14: 0,
     YulRPG: 0,
@@ -183,4 +183,4 @@ function Stats() {
   );
 }
 
-export default Stats;
+export default Status;
