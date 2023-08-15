@@ -24,16 +24,22 @@ function Status() {
   const currentTime = Date.now();
   const twentyFourHoursAgo = currentTime - 24 * 60 * 60 * 1000;
 
-  const fetchCommits = async (repoName) => {
-    try {
-      const response = await axios.get(
-        `https://api.github.com/repos/Enzzzzz/${repoName}/commits`,
-        {
-          headers: {
-            Authorization: 'Token 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',
-          },
-        }
-      );
+  const githubToken = import.meta.env.VITE_GIT_TOKEN;;
+
+const fetchCommits = async (repoName) => {
+  try {
+    if (!githubToken) {
+      throw new Error('GitHub token not provided');
+    }
+
+    const response = await axios.get(
+      `https://api.github.com/repos/Enzzzzz/${repoName}/commits`,
+      {
+        headers: {
+          Authorization: `Token ${githubToken}`,
+        },
+      }
+    );
 
       
 
