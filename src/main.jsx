@@ -41,7 +41,7 @@ const router = createBrowserRouter([
     element: <RPG />
   },
   {
-    path: '/stats',
+    path: '/status',
     element: <Status />
   }
 ]);
