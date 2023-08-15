@@ -8,6 +8,7 @@ import Suporte from './routes/Suporte'
 import Home from './routes/Home'
 import './index.css'
 import RPG from './routes/RPG'
+import Status from './routes/Status'
 
 
 const router = createBrowserRouter([
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: '/rpg',
     element: <RPG />
+  },
+  {
+    path: '/stats',
+    element: <Status />
   }
 ]);
 
