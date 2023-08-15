@@ -81,13 +81,13 @@ function Status() {
 
 
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-2/4  p-4 transform transform-all duration-300 shadow-purple-400/50 shadow-lg hover:shadow-xl hover:shadow-purple-400/50 items-center py-6 px-0 sm:px-3 bg-gradient-to-br from-purple-400/20 rounded-[10px] relative">
-              <h1 className="text-white text-lg mb-2 font-bold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl pr-1 pl-1">
+              <h1 className="text-white text-lg mb-2 font-bold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl pr-2 pl-2">
                 Yulbot
               </h1>
-              <div className="absolute top-2 right-2 bg-red-500 rounded-full w-12 h-6 flex items-center justify-center">
+              <div className="absolute top-7 right-4 bg-red-500 rounded-full w-12 h-6 flex items-center justify-center">
                 <p className="text-white text-xs font-bold">Offline</p>
               </div>
-              <h2 className="text-white mb-2 pr-1 pl-1 font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+              <h2 className="text-white mb-2 pr-2 pl-2 font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 Atualizando para versão 14
               </h2>
               <div className="flex pr-1 pl-1 flex-col">
@@ -130,13 +130,13 @@ function Status() {
 
 
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-2/4 p-4 transform transform-all duration-300 shadow-purple-400/50 shadow-lg hover:shadow-xl hover:shadow-purple-400/50 items-center py-6 px-0 sm:px-3 bg-gradient-to-br from-purple-400/20 rounded-[10px] relative">
-              <h1 className="text-white text-lg mb-2 font-bold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl pr-1 pl-1">
+              <h1 className="text-white text-lg mb-2 font-bold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl pr-2 pl-2">
                 YulRPG
               </h1>
-              <div className="absolute top-2 right-2 bg-red-500 rounded-full w-12 h-6 flex items-center justify-center">
+              <div className="absolute top-7 right-4 bg-red-500 rounded-full w-12 h-6 flex items-center justify-center">
     <p className="text-white text-xs font-bold">Offline</p>
   </div>
-              <h2 className="text-white mb-2 pr-1 pl-1 font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+              <h2 className="text-white mb-2 pr-2 pl-2 font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 Criação do bot
               </h2>
               <div className="flex pr-1 pl-1 flex-col">
@@ -191,13 +191,13 @@ function Status() {
 
 
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-2/4 p-4 transform transform-all duration-300 shadow-purple-400/50 shadow-lg hover:shadow-xl hover:shadow-purple-400/50 items-center py-6 px-0 sm:px-3 bg-gradient-to-br from-purple-400/20 rounded-[10px] relative">
-              <h1 className="text-white text-lg mb-2 font-bold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl pr-1 pl-1">
+              <h1 className="text-white text-lg mb-2 font-bold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl pr-2 pl-2">
                 Yulbot Website
               </h1>
-              <div className="absolute top-2 right-2 bg-green-500 rounded-full w-12 h-6 flex items-center justify-center">
+              <div className="absolute top-7 right-4 bg-green-500 rounded-full w-12 h-6 flex items-center justify-center">
                 <p className="text-white text-xs font-bold">Online</p>
               </div>
-              <h2 className="text-white mb-2 pr-1 pl-1 font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+              <h2 className="text-white mb-2 pr-2 pl-2 font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 Página "Status"
               </h2>
               <div className="flex pr-1 pl-1 flex-col">
@@ -229,7 +229,7 @@ function Status() {
                 <div className="relative h-4 bg-gray-500 rounded-md">
                   <div className="absolute h-full bg-purple-600 rounded-md w-[100%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    11/11
+                    15/15
                   </p>
                 </div>
                 <p className="absolute bottom-0 text-gray-700 px-1 pb-1 sm:text-xs md:text-sm">
