@@ -14,7 +14,7 @@ function Status() {
     fetchData();
     const interval = setInterval(() => {
       fetchData();
-    }, 300000);
+    }, 30000);
     fetchData();
     return () => {
       clearInterval(interval);
@@ -156,9 +156,9 @@ const fetchCommits = async (repoName) => {
               <div className="flex pr-1 pl-1 flex-col">
                 <p className="text-gray-300 mb-1 pl-1 md:pl-2 lg:pl-4 sm:text-sm md:text-lg xl:text-2xl text-lg">Código</p>
                 <div className="relative h-4 bg-gray-500  rounded-md">
-                  <div className="absolute h-full bg-purple-600  rounded-md w-[42%]"></div>
+                  <div className="absolute h-full bg-purple-600  rounded-md w-[76%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    9/21
+                    16/21
                   </p>
                 </div>
               </div>
@@ -173,9 +173,9 @@ const fetchCommits = async (repoName) => {
               </div><div className="flex pr-1 pl-1 flex-col">
                 <p className="text-gray-300 mb-1 pl-1 md:pl-2 lg:pl-4 sm:text-sm md:text-lg xl:text-2xl text-lg">Correções</p>
                 <div className="relative h-4 bg-gray-500 rounded-md">
-                  <div className="absolute h-full bg-purple-600 rounded-md w-[96%]"></div>
+                  <div className="absolute h-full bg-purple-600 rounded-md w-[100%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    8/9
+                    11/11
                   </p>
                 </div>
                 <p className="absolute bottom-0 text-gray-700 px-1 pb-1 sm:text-xs md:text-sm">{changesInLast24Hours.YulbotSite} mudança(s) nas últimas 24 horas</p>
