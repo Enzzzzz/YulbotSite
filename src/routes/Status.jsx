@@ -10,6 +10,40 @@ function Status() {
     YulbotSite: 0,
   });
 
+  const [commitHistory, setCommitHistory] = useState({
+    YulBotV14: [],
+    YulRPG: [],
+    YulbotSite: [],
+  });
+
+  const fetchCommitHistory = async (repoName) => {
+    try {
+      if (!githubToken) {
+        throw new Error('GitHub token not provided');
+      }
+  
+      const response = await axios.get(
+        `https://api.github.com/repos/Enzzzzz/${repoName}/commits`,
+        {
+          headers: {
+            Authorization: `Token ${githubToken}`,
+          },
+        }
+      );
+  
+      return response.data;
+    } catch (error) {
+      console.error(`Erro ao buscar commits do repositório ${repoName}:`, error);
+      return [];
+    }
+  };
+
+  const changelog = [
+    { message: "Primeiro commit" },
+    { message: "Correção de bugs" },
+    { message: "Nova funcionalidade adicionada" },
+  ];
+
   useEffect(() => {
     fetchData();
     const interval = setInterval(() => {
@@ -61,11 +95,22 @@ function Status() {
     const yulrpgChanges = await fetchCommits("YulRPG");
     const yulbotWebsiteChanges = await fetchCommits("YulbotSite");
 
+    const yulbotChangelog = await fetchCommitHistory('YulBotV14');
+    const yulrpgChangelog = await fetchCommitHistory('YulRPG');
+    const yulbotWebsiteChangelog = await fetchCommitHistory('YulbotSite');
+  
+    setCommitHistory({
+      YulBotV14: yulbotChangelog,
+      YulRPG: yulrpgChangelog,
+      YulbotSite: yulbotWebsiteChangelog,
+    });
+
     setChangesInLast24Hours({
       YulBotV14: yulbotChanges,
       YulRPG: yulrpgChanges,
       YulbotSite: yulbotWebsiteChanges,
     });
+
   };
 
   return (
@@ -205,9 +250,9 @@ function Status() {
                   Código
                 </p>
                 <div className="relative h-4 bg-gray-500  rounded-md">
-                  <div className="absolute h-full bg-purple-600  rounded-md w-[76%]"></div>
+                  <div className="absolute h-full bg-purple-600  rounded-md w-[48%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    16/21
+                    16/34
                   </p>
                 </div>
               </div>
@@ -227,9 +272,9 @@ function Status() {
                   Correções
                 </p>
                 <div className="relative h-4 bg-gray-500 rounded-md">
-                  <div className="absolute h-full bg-purple-600 rounded-md w-[100%]"></div>
+                  <div className="absolute h-full bg-purple-600 rounded-md w-[98%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    15/15
+                    15/16
                   </p>
                 </div>
                 <p className="absolute bottom-0 text-gray-700 px-1 pb-1 sm:text-xs md:text-sm">
@@ -241,6 +286,17 @@ function Status() {
           </div>
         </div>
       </div>
+      {/* Changelog */}
+  <div className="mt-8 p-4 bg-gray-800 rounded-md">
+  <h2 className="text-white text-lg font-bold mb-4">Changelog</h2>
+  {commitHistory.YulBotV14 && (
+    <ul className="list-disc list-inside text-white">
+      {commitHistory.YulBotV14.map((commit, index) => (
+        <li key={index}>{commit.commit.message}</li>
+      ))}
+    </ul>
+  )}
+  </div>
       <Footer />
     </div>
   );
