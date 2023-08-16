@@ -64,7 +64,7 @@ function Status() {
   const currentTime = Date.now();
   const twentyFourHoursAgo = currentTime - 24 * 60 * 60 * 1000;
 
-  const githubToken = import.meta.env.VITE_GIT_TOKEN;
+  const githubToken = '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' //import.meta.env.VITE_GIT_TOKEN;
 
   
 
@@ -122,15 +122,15 @@ function Status() {
   };
 
   return (
-    <div className="bg-black w-full overflow-hidden h-full">
+    <div className="bg-black w-full  overflow-hidden h-full">
       <div className={`sm:px-16 px-6 flex justify-center items-center`}>
-        <div className={`xl:max-w-[1280px]  w-full`}>
+        <div className={`xl:max-w-[1280px] w-full`}>
           <Navbar />
         </div>
       </div>
       <div className="sm:px-16 px-6 flex justify-center items-center">
-        <div className="xl:max-w-[1280px]">
-          <div className="flex flex-col sm:flex-row  justify-between mt-8 gap-10">
+        <div className="xl:max-w-[1280px] space-y-8 w-full">
+          <div className="flex flex-col sm:flex-row justify-between mt-8 gap-10">
 
 
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-2/4  p-4 transform transform-all duration-300 shadow-purple-400/50 shadow-lg hover:shadow-xl hover:shadow-purple-400/50 items-center py-6 px-0 sm:px-3 bg-gradient-to-br from-purple-400/20 rounded-[10px] relative">
@@ -258,9 +258,9 @@ function Status() {
                   Código
                 </p>
                 <div className="relative h-4 bg-gray-500  rounded-md">
-                  <div className="absolute h-full bg-purple-600  rounded-md w-[48%]"></div>
+                  <div className="absolute h-full bg-purple-600  rounded-md w-[85%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    16/34
+                    28/34
                   </p>
                 </div>
               </div>
@@ -269,9 +269,9 @@ function Status() {
                   Arte
                 </p>
                 <div className="relative h-4 bg-gray-500 rounded-md">
-                  <div className="absolute h-full bg-purple-600 rounded-md w-[60%]"></div>
+                  <div className="absolute h-full bg-purple-600 rounded-md w-[80%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    3/5
+                    4/5
                   </p>
                 </div>
               </div>
@@ -282,7 +282,7 @@ function Status() {
                 <div className="relative h-4 bg-gray-500 rounded-md">
                   <div className="absolute h-full bg-purple-600 rounded-md w-[100%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    16/16
+                    19/19
                   </p>
                 </div>
                 <p className="absolute bottom-0 text-gray-700 px-1 pb-1 sm:text-xs md:text-sm">
@@ -295,7 +295,7 @@ function Status() {
         </div>
       </div>
       {/* Changelog */}
-  <div className="mt-8 p-4 bg-gray-800 md:mt-40 m-2 md:m-10 rounded-md ">
+      <div className="mt-8 p-4 bg-gray-800 md:mt-40 m-2 md:m-10 rounded-md ">
   <h2 className="text-white text-lg font-bold mb-4">Registro de Atividades</h2>
         <div className="flex space-x-4">
           <button
