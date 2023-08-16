@@ -139,6 +139,21 @@ function Status() {
     });
   };
 
+  const yulBotStats = statsData["YulBotV14"];
+  const yulBotProgress =
+  yulBotStats &&
+  `${yulBotStats.coded}/${yulBotStats.totalCode}`;
+
+  const yulRPGStats = statsData["YulRPG"];
+const yulRPGProgress =
+  yulRPGStats &&
+  `${yulRPGStats.coded}/${yulRPGStats.totalCode}`;
+
+  const yulSiteStats = statsData["YulbotSite"];
+const yulSiteProgress =
+  yulSiteStats &&
+  `${yulSiteStats.coded}/${yulSiteStats.totalCode}`;
+
   return (
     <div className="bg-black w-full  overflow-hidden h-full">
       <div className={`sm:px-16 px-6 flex justify-center items-center`}>
@@ -166,7 +181,12 @@ function Status() {
                   Código
                 </p>
                 <div className="relative h-4 bg-gray-500  rounded-md">
-                  <div className="absolute h-full bg-purple-600  rounded-md w-[14%]"></div>
+                  <div className="absolute h-full bg-purple-600  rounded-md"
+                  style={{
+                    width: yulBotStats
+                      ? `${(yulBotStats.coded / yulBotStats.totalCode) * 100}%`
+                      : "0%"
+                  }}></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulBotV14"]
                       ? `${statsData["YulBotV14"].coded}/${statsData["YulBotV14"].totalCode}`
@@ -179,7 +199,12 @@ function Status() {
                   Comandos
                 </p>
                 <div className="relative h-4 bg-gray-500 rounded-md">
-                  <div className="absolute h-full bg-purple-600 rounded-md w-[13%]"></div>
+                  <div className="absolute h-full bg-purple-600 rounded-md"
+                  style={{
+                    width: yulBotStats
+                      ? `${(yulBotStats.updatedCommands / yulBotStats.totalCommands) * 100}%`
+                      : "0%"
+                  }}></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulBotV14"]
                       ? `${statsData["YulBotV14"].updatedCommands}/${statsData["YulBotV14"].totalCommands}`
@@ -192,7 +217,12 @@ function Status() {
                   Correções
                 </p>
                 <div className="relative h-4 bg-gray-500 rounded-md">
-                  <div className="absolute h-full bg-purple-600 rounded-md w-[95%]"></div>
+                  <div className="absolute h-full bg-purple-600 rounded-md "
+                  style={{
+                    width: yulBotStats
+                      ? `${(yulBotStats.bugFixes / yulBotStats.bugs) * 100}%`
+                      : "0%"
+                  }}></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulBotV14"]
                       ? `${statsData["YulBotV14"].bugFixes}/${statsData["YulBotV14"].bugs}`
@@ -222,7 +252,12 @@ function Status() {
                   Código
                 </p>
                 <div className="relative h-4 bg-gray-500  rounded-md">
-                  <div className="absolute h-full bg-purple-600  rounded-md w-[31%]"></div>
+                  <div className="absolute h-full bg-purple-600  rounded-md"
+                  style={{
+                    width: yulRPGStats
+                      ? `${(yulRPGStats.coded / yulRPGStats.totalCode) * 100}%`
+                      : "0%"
+                  }}></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulRPG"]
                       ? `${statsData["YulRPG"].coded}/${statsData["YulRPG"].totalCode}`
@@ -235,7 +270,12 @@ function Status() {
                   Comandos
                 </p>
                 <div className="relative h-4 bg-gray-500 rounded-md">
-                  <div className="absolute h-full bg-purple-600 rounded-md w-[0%]"></div>
+                  <div className="absolute h-full bg-purple-600 rounded-md"
+                  style={{
+                    width: yulRPGStats
+                      ? `${(yulRPGStats.updatedCommands / yulRPGStats.totalCommands) * 100}%`
+                      : "0%"
+                  }}></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulRPG"]
                       ? `${statsData["YulRPG"].updatedCommands}/${statsData["YulRPG"].totalCommands}`
@@ -248,7 +288,12 @@ function Status() {
                   Arte
                 </p>
                 <div className="relative h-4 bg-gray-500 rounded-md">
-                  <div className="absolute h-full bg-purple-600 rounded-md w-[61%]"></div>
+                  <div className="absolute h-full bg-purple-600 rounded-md"
+                  style={{
+                    width: yulRPGStats
+                      ? `${(yulRPGStats.art / yulRPGStats.totalArt) * 100}%`
+                      : "0%"
+                  }}></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulRPG"]
                       ? `${statsData["YulRPG"].art}/${statsData["YulRPG"].totalArt}`
@@ -261,7 +306,12 @@ function Status() {
                   Correções
                 </p>
                 <div className="relative h-4 bg-gray-500 rounded-md">
-                  <div className="absolute h-full bg-purple-600 rounded-md w-[93%]"></div>
+                  <div className="absolute h-full bg-purple-600 rounded-md"
+                  style={{
+                    width: yulRPGStats
+                      ? `${(yulRPGStats.bugFixes / yulRPGStats.bugs) * 100}%`
+                      : "0%"
+                  }}></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulRPG"]
                       ? `${statsData["YulRPG"].bugFixes}/${statsData["YulRPG"].bugs}`
@@ -291,7 +341,13 @@ function Status() {
                   Código
                 </p>
                 <div className="relative h-4 bg-gray-500  rounded-md">
-                  <div className="absolute h-full bg-purple-600  rounded-md w-[85%]"></div>
+                  <div className="absolute h-full bg-purple-600  rounded-md"
+                  style={{
+                    width: yulSiteStats
+                      ? `${(yulSiteStats.coded / yulSiteStats.totalCode) * 100}%`
+                      : "0%"
+                  }}
+                  ></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulbotSite"]
                       ? `${statsData["YulbotSite"].coded}/${statsData["YulbotSite"].totalCode}`
@@ -304,7 +360,12 @@ function Status() {
                   Arte
                 </p>
                 <div className="relative h-4 bg-gray-500 rounded-md">
-                  <div className="absolute h-full bg-purple-600 rounded-md w-[80%]"></div>
+                  <div className="absolute h-full bg-purple-600 rounded-md"
+                  style={{
+                    width: yulSiteStats
+                      ? `${(yulSiteStats.art / yulSiteStats.totalArt) * 100}%`
+                      : "0%"
+                  }}></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulbotSite"]
                       ? `${statsData["YulbotSite"].art}/${statsData["YulbotSite"].totalArt}`
@@ -317,7 +378,12 @@ function Status() {
                   Correções
                 </p>
                 <div className="relative h-4 bg-gray-500 rounded-md">
-                  <div className="absolute h-full bg-purple-600 rounded-md w-[100%]"></div>
+                  <div className="absolute h-full bg-purple-600 rounded-md"
+                  style={{
+                    width: yulSiteStats
+                      ? `${(yulSiteStats.bugFixes / yulSiteStats.bugs) * 100}%`
+                      : "0%"
+                  }}></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulbotSite"]
                       ? `${statsData["YulbotSite"].bugFixes}/${statsData["YulbotSite"].bugs}`
