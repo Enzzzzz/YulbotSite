@@ -16,6 +16,12 @@ function Status() {
     YulbotSite: [],
   });
 
+  const [activeTab, setActiveTab] = useState("YulBotV14");
+
+  const handleTabChange = (tabName) => {
+    setActiveTab(tabName);
+  };
+
   const fetchCommitHistory = async (repoName) => {
     try {
       if (!githubToken) {
@@ -59,6 +65,8 @@ function Status() {
   const twentyFourHoursAgo = currentTime - 24 * 60 * 60 * 1000;
 
   const githubToken = import.meta.env.VITE_GIT_TOKEN;
+
+  
 
   const fetchCommits = async (repoName) => {
     try {
@@ -272,9 +280,9 @@ function Status() {
                   Correções
                 </p>
                 <div className="relative h-4 bg-gray-500 rounded-md">
-                  <div className="absolute h-full bg-purple-600 rounded-md w-[98%]"></div>
+                  <div className="absolute h-full bg-purple-600 rounded-md w-[100%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    15/16
+                    16/16
                   </p>
                 </div>
                 <p className="absolute bottom-0 text-gray-700 px-1 pb-1 sm:text-xs md:text-sm">
@@ -288,14 +296,43 @@ function Status() {
       </div>
       {/* Changelog */}
   <div className="mt-8 p-4 bg-gray-800 rounded-md">
-  <h2 className="text-white text-lg font-bold mb-4">Changelog</h2>
-  {commitHistory.YulBotV14 && (
-    <ul className="list-disc list-inside text-white">
-      {commitHistory.YulBotV14.map((commit, index) => (
-        <li key={index}>{commit.commit.message}</li>
-      ))}
-    </ul>
-  )}
+  <h2 className="text-white text-lg font-bold mb-4">Registro de Alterações</h2>
+        <div className="flex space-x-4">
+          <button
+            className={`text-white ${
+              activeTab === "YulBotV14" ? "font-bold" : ""
+            }`}
+            onClick={() => handleTabChange("YulBotV14")}
+          >
+            YulBot
+          </button>
+          <button
+            className={`text-white ${
+              activeTab === "YulRPG" ? "font-bold" : ""
+            }`}
+            onClick={() => handleTabChange("YulRPG")}
+          >
+            YulRPG
+          </button>
+          <button
+            className={`text-white ${
+              activeTab === "YulbotSite" ? "font-bold" : ""
+            }`}
+            onClick={() => handleTabChange("YulbotSite")}
+          >
+            Yulbot Site
+          </button>
+        </div>
+        <ul className="list-disc list-inside text-white mt-4">
+          {commitHistory[activeTab].slice(0, 5).map((commit, index) => (
+            <li key={index}>
+              <p>{commit.commit.message}</p>
+              <p className="text-gray-500 text-sm">
+                {new Date(commit.commit.author.date).toLocaleString()}
+              </p>
+            </li>
+          ))}
+        </ul>
   </div>
       <Footer />
     </div>
