@@ -64,7 +64,7 @@ function Status() {
   const currentTime = Date.now();
   const twentyFourHoursAgo = currentTime - 24 * 60 * 60 * 1000;
 
-  const githubToken = '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' //import.meta.env.VITE_GIT_TOKEN;
+  const githubToken = import.meta.env.VITE_GIT_TOKEN;
 
   
 
