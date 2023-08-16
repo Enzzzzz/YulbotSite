@@ -18,6 +18,24 @@ function Status() {
 
   const [activeTab, setActiveTab] = useState("YulBotV14");
 
+  const [statsData, setStatsData] = useState({});
+
+  useEffect(() => {
+    async function fetchStatsData() {
+      try {
+        const timestamp = new Date().getTime();
+        const response = await axios.get(
+          `https://raw.githubusercontent.com/Enzzzzz/Stats/main/Stats.json?timestamp=${timestamp}`
+        );
+        setStatsData(response.data);
+      } catch (error) {
+        console.error("Error fetching commands data:", error);
+      }
+    }
+
+    fetchStatsData();
+  }, []);
+
   const handleTabChange = (tabName) => {
     setActiveTab(tabName);
   };
@@ -25,9 +43,9 @@ function Status() {
   const fetchCommitHistory = async (repoName) => {
     try {
       if (!githubToken) {
-        throw new Error('GitHub token not provided');
+        throw new Error("GitHub token not provided");
       }
-  
+
       const response = await axios.get(
         `https://api.github.com/repos/Enzzzzz/${repoName}/commits`,
         {
@@ -36,10 +54,13 @@ function Status() {
           },
         }
       );
-  
+
       return response.data;
     } catch (error) {
-      console.error(`Erro ao buscar commits do repositório ${repoName}:`, error);
+      console.error(
+        `Erro ao buscar commits do repositório ${repoName}:`,
+        error
+      );
       return [];
     }
   };
@@ -101,10 +122,10 @@ function Status() {
     const yulrpgChanges = await fetchCommits("YulRPG");
     const yulbotWebsiteChanges = await fetchCommits("YulbotSite");
 
-    const yulbotChangelog = await fetchCommitHistory('YulBotV14');
-    const yulrpgChangelog = await fetchCommitHistory('YulRPG');
-    const yulbotWebsiteChangelog = await fetchCommitHistory('YulbotSite');
-  
+    const yulbotChangelog = await fetchCommitHistory("YulBotV14");
+    const yulrpgChangelog = await fetchCommitHistory("YulRPG");
+    const yulbotWebsiteChangelog = await fetchCommitHistory("YulbotSite");
+
     setCommitHistory({
       YulBotV14: yulbotChangelog,
       YulRPG: yulrpgChangelog,
@@ -116,7 +137,6 @@ function Status() {
       YulRPG: yulrpgChanges,
       YulbotSite: yulbotWebsiteChanges,
     });
-
   };
 
   return (
@@ -129,7 +149,7 @@ function Status() {
       <div className="sm:px-16 px-6 flex justify-center items-center">
         <div className="xl:max-w-[1280px] space-y-8 w-full">
           <div className="flex flex-col sm:flex-row justify-between mt-8 gap-10">
-
+            {/* YulBot Bar */}
 
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-2/4  p-4 transform transform-all duration-300 shadow-purple-400/50 shadow-lg hover:shadow-xl hover:shadow-purple-400/50 items-center py-6 px-0 sm:px-3 bg-gradient-to-br from-purple-400/20 rounded-[10px] relative">
               <h1 className="text-white text-lg mb-2 font-bold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl pr-2 pl-2">
@@ -148,7 +168,9 @@ function Status() {
                 <div className="relative h-4 bg-gray-500  rounded-md">
                   <div className="absolute h-full bg-purple-600  rounded-md w-[14%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    20/139
+                    {statsData["YulBotV14"]
+                      ? `${statsData["YulBotV14"].coded}/${statsData["YulBotV14"].totalCode}`
+                      : "Carregando..."}
                   </p>
                 </div>
               </div>
@@ -159,7 +181,9 @@ function Status() {
                 <div className="relative h-4 bg-gray-500 rounded-md">
                   <div className="absolute h-full bg-purple-600 rounded-md w-[13%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    6/43
+                    {statsData["YulBotV14"]
+                      ? `${statsData["YulBotV14"].updatedCommands}/${statsData["YulBotV14"].totalCommands}`
+                      : "Carregando..."}
                   </p>
                 </div>
               </div>
@@ -170,7 +194,9 @@ function Status() {
                 <div className="relative h-4 bg-gray-500 rounded-md">
                   <div className="absolute h-full bg-purple-600 rounded-md w-[95%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    10/11
+                    {statsData["YulBotV14"]
+                      ? `${statsData["YulBotV14"].bugFixes}/${statsData["YulBotV14"].bugs}`
+                      : "Carregando..."}
                   </p>
                 </div>
               </div>
@@ -179,14 +205,15 @@ function Status() {
               </p>
             </div>
 
+            {/* YulRPG Bar */}
 
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-2/4 p-4 transform transform-all duration-300 shadow-purple-400/50 shadow-lg hover:shadow-xl hover:shadow-purple-400/50 items-center py-6 px-0 sm:px-3 bg-gradient-to-br from-purple-400/20 rounded-[10px] relative">
               <h1 className="text-white text-lg mb-2 font-bold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl pr-2 pl-2">
                 YulRPG
               </h1>
               <div className="absolute top-7 right-4 bg-red-500 rounded-full w-12 h-6 flex items-center justify-center">
-    <p className="text-white text-xs font-bold">Offline</p>
-  </div>
+                <p className="text-white text-xs font-bold">Offline</p>
+              </div>
               <h2 className="text-white mb-2 pr-2 pl-2 font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 Criação do bot
               </h2>
@@ -197,7 +224,9 @@ function Status() {
                 <div className="relative h-4 bg-gray-500  rounded-md">
                   <div className="absolute h-full bg-purple-600  rounded-md w-[31%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    81/260
+                    {statsData["YulRPG"]
+                      ? `${statsData["YulRPG"].coded}/${statsData["YulRPG"].totalCode}`
+                      : "Carregando..."}
                   </p>
                 </div>
               </div>
@@ -208,7 +237,9 @@ function Status() {
                 <div className="relative h-4 bg-gray-500 rounded-md">
                   <div className="absolute h-full bg-purple-600 rounded-md w-[0%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    0/3
+                    {statsData["YulRPG"]
+                      ? `${statsData["YulRPG"].updatedCommands}/${statsData["YulRPG"].totalCommands}`
+                      : "Carregando..."}
                   </p>
                 </div>
               </div>
@@ -219,7 +250,9 @@ function Status() {
                 <div className="relative h-4 bg-gray-500 rounded-md">
                   <div className="absolute h-full bg-purple-600 rounded-md w-[61%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    8/13
+                    {statsData["YulRPG"]
+                      ? `${statsData["YulRPG"].art}/${statsData["YulRPG"].totalArt}`
+                      : "Carregando..."}
                   </p>
                 </div>
               </div>
@@ -230,7 +263,9 @@ function Status() {
                 <div className="relative h-4 bg-gray-500 rounded-md">
                   <div className="absolute h-full bg-purple-600 rounded-md w-[93%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    41/44
+                    {statsData["YulRPG"]
+                      ? `${statsData["YulRPG"].bugFixes}/${statsData["YulRPG"].bugs}`
+                      : "Carregando..."}
                   </p>
                 </div>
               </div>
@@ -239,7 +274,7 @@ function Status() {
               </p>
             </div>
 
-
+            {/* YulbotSite Bar */}
 
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-2/4 p-4 transform transform-all duration-300 shadow-purple-400/50 shadow-lg hover:shadow-xl hover:shadow-purple-400/50 items-center py-6 px-0 sm:px-3 bg-gradient-to-br from-purple-400/20 rounded-[10px] relative">
               <h1 className="text-white text-lg mb-2 font-bold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl pr-2 pl-2">
@@ -258,7 +293,9 @@ function Status() {
                 <div className="relative h-4 bg-gray-500  rounded-md">
                   <div className="absolute h-full bg-purple-600  rounded-md w-[85%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    28/34
+                    {statsData["YulbotSite"]
+                      ? `${statsData["YulbotSite"].coded}/${statsData["YulbotSite"].totalCode}`
+                      : "Carregando..."}
                   </p>
                 </div>
               </div>
@@ -269,7 +306,9 @@ function Status() {
                 <div className="relative h-4 bg-gray-500 rounded-md">
                   <div className="absolute h-full bg-purple-600 rounded-md w-[80%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    4/5
+                    {statsData["YulbotSite"]
+                      ? `${statsData["YulbotSite"].art}/${statsData["YulbotSite"].totalArt}`
+                      : "Carregando..."}
                   </p>
                 </div>
               </div>
@@ -280,7 +319,9 @@ function Status() {
                 <div className="relative h-4 bg-gray-500 rounded-md">
                   <div className="absolute h-full bg-purple-600 rounded-md w-[100%]"></div>
                   <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
-                    19/19
+                    {statsData["YulbotSite"]
+                      ? `${statsData["YulbotSite"].bugFixes}/${statsData["YulbotSite"].bugs}`
+                      : "Carregando..."}
                   </p>
                 </div>
                 <p className="absolute bottom-0 text-gray-700 px-1 pb-1 sm:text-xs md:text-sm">
@@ -294,11 +335,15 @@ function Status() {
       </div>
       {/* Changelog */}
       <div className="mt-8 p-4 bg-gray-800 md:mt-40 m-2 md:m-10 rounded-md ">
-  <h2 className="text-white text-lg font-bold mb-4">Registro de Atividades</h2>
+        <h2 className="text-white text-lg font-bold mb-4">
+          Registro de Atividades
+        </h2>
         <div className="flex space-x-4">
           <button
             className={`text-white text-lg sm:text-lg md:text-xl xl:text-1xl border p-2 rounded-md border-purple-600 ${
-              activeTab === "YulBotV14" ? "font-bold bg-purple-500 bg-opacity-10" : ""
+              activeTab === "YulBotV14"
+                ? "font-bold bg-purple-500 bg-opacity-10"
+                : ""
             }`}
             onClick={() => handleTabChange("YulBotV14")}
           >
@@ -306,7 +351,9 @@ function Status() {
           </button>
           <button
             className={`text-white text-lg sm:text-lg md:text-xl xl:text-1xl border p-2 rounded-md border-purple-600 ${
-              activeTab === "YulRPG" ? "font-bold bg-purple-500 bg-opacity-10" : ""
+              activeTab === "YulRPG"
+                ? "font-bold bg-purple-500 bg-opacity-10"
+                : ""
             }`}
             onClick={() => handleTabChange("YulRPG")}
           >
@@ -314,7 +361,9 @@ function Status() {
           </button>
           <button
             className={`text-white text-lg sm:text-lg md:text-xl xl:text-1xl border p-2 rounded-md border-purple-600 ${
-              activeTab === "YulbotSite" ? "font-bold bg-purple-500 bg-opacity-10" : ""
+              activeTab === "YulbotSite"
+                ? "font-bold bg-purple-500 bg-opacity-10"
+                : ""
             }`}
             onClick={() => handleTabChange("YulbotSite")}
           >
@@ -331,7 +380,7 @@ function Status() {
             </li>
           ))}
         </ul>
-  </div>
+      </div>
       <Footer />
     </div>
   );
