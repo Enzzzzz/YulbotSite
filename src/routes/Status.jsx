@@ -296,34 +296,34 @@ function Status() {
       </div>
       {/* Changelog */}
   <div className="mt-8 p-4 bg-gray-800 rounded-md">
-  <h2 className="text-white text-lg font-bold mb-4">Registro de Alterações</h2>
+  <h2 className="text-white text-lg font-bold mb-4">Registro de Atividades</h2>
         <div className="flex space-x-4">
           <button
-            className={`text-white ${
-              activeTab === "YulBotV14" ? "font-bold" : ""
+            className={`text-white text-lg sm:text-lg md:text-xl xl:text-1xl border p-2 rounded-md border-purple-600 ${
+              activeTab === "YulBotV14" ? "font-bold bg-purple-500 bg-opacity-10" : ""
             }`}
             onClick={() => handleTabChange("YulBotV14")}
           >
             YulBot
           </button>
           <button
-            className={`text-white ${
-              activeTab === "YulRPG" ? "font-bold" : ""
+            className={`text-white text-lg sm:text-lg md:text-xl xl:text-1xl border p-2 rounded-md border-purple-600 ${
+              activeTab === "YulRPG" ? "font-bold bg-purple-500 bg-opacity-10" : ""
             }`}
             onClick={() => handleTabChange("YulRPG")}
           >
             YulRPG
           </button>
           <button
-            className={`text-white ${
-              activeTab === "YulbotSite" ? "font-bold" : ""
+            className={`text-white text-lg sm:text-lg md:text-xl xl:text-1xl border p-2 rounded-md border-purple-600 ${
+              activeTab === "YulbotSite" ? "font-bold bg-purple-500 bg-opacity-10" : ""
             }`}
             onClick={() => handleTabChange("YulbotSite")}
           >
             Yulbot Site
           </button>
         </div>
-        <ul className="list-disc list-inside text-white mt-4">
+        <ul className="list-disc list-inside text-sm sm:text-lg md:text-xl text-white mt-4">
           {commitHistory[activeTab].slice(0, 5).map((commit, index) => (
             <li key={index}>
               <p>{commit.commit.message}</p>
