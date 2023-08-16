@@ -66,8 +66,6 @@ function Status() {
 
   const githubToken = import.meta.env.VITE_GIT_TOKEN;
 
-  
-
   const fetchCommits = async (repoName) => {
     try {
       if (!githubToken) {
