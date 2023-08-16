@@ -122,15 +122,15 @@ function Status() {
   };
 
   return (
-    <div className="bg-black w-full min-h-screen overflow-hidden h-full">
+    <div className="bg-black w-full overflow-hidden h-full">
       <div className={`sm:px-16 px-6 flex justify-center items-center`}>
-        <div className={`xl:max-w-[1280px] w-full`}>
+        <div className={`xl:max-w-[1280px]  w-full`}>
           <Navbar />
         </div>
       </div>
       <div className="sm:px-16 px-6 flex justify-center items-center">
-        <div className="xl:max-w-[1280px] min-h-screen w-full">
-          <div className="flex flex-col sm:flex-row justify-between mt-8 gap-10">
+        <div className="xl:max-w-[1280px]">
+          <div className="flex flex-col sm:flex-row  justify-between mt-8 gap-10">
 
 
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-2/4  p-4 transform transform-all duration-300 shadow-purple-400/50 shadow-lg hover:shadow-xl hover:shadow-purple-400/50 items-center py-6 px-0 sm:px-3 bg-gradient-to-br from-purple-400/20 rounded-[10px] relative">
@@ -295,7 +295,7 @@ function Status() {
         </div>
       </div>
       {/* Changelog */}
-  <div className="mt-8 p-4 bg-gray-800 rounded-md">
+  <div className="mt-8 p-4 bg-gray-800 md:mt-40 m-2 md:m-10 rounded-md ">
   <h2 className="text-white text-lg font-bold mb-4">Registro de Atividades</h2>
         <div className="flex space-x-4">
           <button
@@ -323,7 +323,7 @@ function Status() {
             Yulbot Site
           </button>
         </div>
-        <ul className="list-disc list-inside text-sm sm:text-lg md:text-xl text-white mt-4">
+        <ul className="list-disc list-inside text-sm sm:text-lg text-white mt-4">
           {commitHistory[activeTab].slice(0, 5).map((commit, index) => (
             <li key={index}>
               <p>{commit.commit.message}</p>
