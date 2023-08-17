@@ -155,7 +155,7 @@ const yulSiteProgress =
   `${yulSiteStats.coded}/${yulSiteStats.totalCode}`;
 
   return (
-    <div className="bg-black w-full  overflow-hidden h-full">
+    <div className="bg-primary w-full  overflow-hidden h-full">
       <div className={`sm:px-16 px-6 flex justify-center items-center`}>
         <div className={`xl:max-w-[1280px] w-full`}>
           <Navbar />
@@ -187,7 +187,7 @@ const yulSiteProgress =
                       ? `${(yulBotStats.coded / yulBotStats.totalCode) * 100}%`
                       : "0%"
                   }}></div>
-                  <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
+                  <p className="absolute -top-1 right-14  translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulBotV14"]
                       ? `${statsData["YulBotV14"].coded}/${statsData["YulBotV14"].totalCode}`
                       : "Carregando..."}
@@ -205,7 +205,7 @@ const yulSiteProgress =
                       ? `${(yulBotStats.updatedCommands / yulBotStats.totalCommands) * 100}%`
                       : "0%"
                   }}></div>
-                  <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
+                  <p className="absolute -top-1 right-14  translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulBotV14"]
                       ? `${statsData["YulBotV14"].updatedCommands}/${statsData["YulBotV14"].totalCommands}`
                       : "Carregando..."}
@@ -223,7 +223,7 @@ const yulSiteProgress =
                       ? `${(yulBotStats.bugFixes / yulBotStats.bugs) * 100}%`
                       : "0%"
                   }}></div>
-                  <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
+                  <p className="absolute -top-1 right-14  translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulBotV14"]
                       ? `${statsData["YulBotV14"].bugFixes}/${statsData["YulBotV14"].bugs}`
                       : "Carregando..."}
@@ -258,7 +258,7 @@ const yulSiteProgress =
                       ? `${(yulRPGStats.coded / yulRPGStats.totalCode) * 100}%`
                       : "0%"
                   }}></div>
-                  <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
+                  <p className="absolute -top-1 right-14  translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulRPG"]
                       ? `${statsData["YulRPG"].coded}/${statsData["YulRPG"].totalCode}`
                       : "Carregando..."}
@@ -276,7 +276,7 @@ const yulSiteProgress =
                       ? `${(yulRPGStats.updatedCommands / yulRPGStats.totalCommands) * 100}%`
                       : "0%"
                   }}></div>
-                  <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
+                  <p className="absolute -top-1 right-14  translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulRPG"]
                       ? `${statsData["YulRPG"].updatedCommands}/${statsData["YulRPG"].totalCommands}`
                       : "Carregando..."}
@@ -294,7 +294,7 @@ const yulSiteProgress =
                       ? `${(yulRPGStats.art / yulRPGStats.totalArt) * 100}%`
                       : "0%"
                   }}></div>
-                  <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
+                  <p className="absolute -top-1 right-14  translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulRPG"]
                       ? `${statsData["YulRPG"].art}/${statsData["YulRPG"].totalArt}`
                       : "Carregando..."}
@@ -312,7 +312,7 @@ const yulSiteProgress =
                       ? `${(yulRPGStats.bugFixes / yulRPGStats.bugs) * 100}%`
                       : "0%"
                   }}></div>
-                  <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
+                  <p className="absolute -top-1 right-14  translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulRPG"]
                       ? `${statsData["YulRPG"].bugFixes}/${statsData["YulRPG"].bugs}`
                       : "Carregando..."}
@@ -348,7 +348,7 @@ const yulSiteProgress =
                       : "0%"
                   }}
                   ></div>
-                  <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
+                  <p className="absolute -top-1 right-14  translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulbotSite"]
                       ? `${statsData["YulbotSite"].coded}/${statsData["YulbotSite"].totalCode}`
                       : "Carregando..."}
@@ -366,7 +366,7 @@ const yulSiteProgress =
                       ? `${(yulSiteStats.art / yulSiteStats.totalArt) * 100}%`
                       : "0%"
                   }}></div>
-                  <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
+                  <p className="absolute -top-1 right-14  translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulbotSite"]
                       ? `${statsData["YulbotSite"].art}/${statsData["YulbotSite"].totalArt}`
                       : "Carregando..."}
@@ -384,7 +384,7 @@ const yulSiteProgress =
                       ? `${(yulSiteStats.bugFixes / yulSiteStats.bugs) * 100}%`
                       : "0%"
                   }}></div>
-                  <p className="absolute -top-1 right-14 transform translate-x-full flex items-center pr-1 text-gray-300">
+                  <p className="absolute -top-1 right-14  translate-x-full flex items-center pr-1 text-gray-300">
                     {statsData["YulbotSite"]
                       ? `${statsData["YulbotSite"].bugFixes}/${statsData["YulbotSite"].bugs}`
                       : "Carregando..."}
