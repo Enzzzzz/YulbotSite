@@ -155,7 +155,7 @@ const yulSiteProgress =
   `${yulSiteStats.coded}/${yulSiteStats.totalCode}`;
 
   return (
-    <div className="bg-primary w-full  overflow-hidden h-full">
+    <div className="bg-primary bg-gradient-to-br from-primary to-purple-900/20 w-full  overflow-hidden h-full">
       <div className={`sm:px-16 px-6 flex justify-center items-center`}>
         <div className={`xl:max-w-[1280px] w-full`}>
           <Navbar />
