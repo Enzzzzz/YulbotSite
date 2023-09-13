@@ -7,10 +7,10 @@ export const navLinks = [
     id: "rpg",
     title: "RPG",
   },
-  {
-    id: "config",
-    title: "Configuração",
-  },
+  // {
+  //   id: "config",
+  //   title: "Configuração",
+  // },
   {
     id: "sobre",
     title: "Sobre",
