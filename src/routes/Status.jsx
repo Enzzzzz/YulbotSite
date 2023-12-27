@@ -118,11 +118,11 @@ function Status() {
   };
 
   const fetchData = async () => {
-    const yulbotChanges = await fetchCommits("YulBotV14");
+    const yulbotChanges = await fetchCommits("YulBot-2.0");
     const yulrpgChanges = await fetchCommits("YulRPG");
     const yulbotWebsiteChanges = await fetchCommits("YulbotSite");
 
-    const yulbotChangelog = await fetchCommitHistory("YulBotV14");
+    const yulbotChangelog = await fetchCommitHistory("YulBot-2.0");
     const yulrpgChangelog = await fetchCommitHistory("YulRPG");
     const yulbotWebsiteChangelog = await fetchCommitHistory("YulbotSite");
 
@@ -168,13 +168,13 @@ const yulSiteProgress =
 
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-2/4  p-4 transform transform-all duration-300 shadow-purple-400/50 shadow-lg hover:shadow-xl hover:shadow-purple-400/50 items-center py-6 px-0 sm:px-3 bg-gradient-to-br from-purple-400/20 rounded-[10px] relative">
               <h1 className="text-white text-lg mb-2 font-bold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl pr-2 pl-2">
-                Yulbot
+                Yulbot Rework
               </h1>
               <div className="absolute top-7 right-4 bg-red-500 rounded-full w-12 h-6 flex items-center justify-center">
                 <p className="text-white text-xs font-bold">Offline</p>
               </div>
               <h2 className="text-white mb-2 pr-2 pl-2 font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
-                Atualizando para versão 14
+                Recriação de YulBot
               </h2>
               <div className="flex pr-1 pl-1 flex-col">
                 <p className="text-gray-300 mb-1 pl-1 md:pl-2 lg:pl-4 sm:text-sm md:text-lg xl:text-2xl text-lg">
@@ -413,7 +413,7 @@ const yulSiteProgress =
             }`}
             onClick={() => handleTabChange("YulBotV14")}
           >
-            YulBot
+            YulBot Rework
           </button>
           <button
             className={`text-white text-lg sm:text-lg md:text-xl xl:text-1xl border p-2 rounded-md border-purple-600 ${
