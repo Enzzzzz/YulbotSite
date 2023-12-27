@@ -26,7 +26,7 @@ const Navbar = () => {
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-nome cursor-pointer text-[16px] ${index === navLinks.lenght - 1 ? 'mr-0' : 'mr-10'} text-white  hover:text-purple-300`}
+            className={`font-poppins font-nome cursor-pointer text-[16px] ${index === navLinks.lenght - 1 ? 'mr-0' : 'mr-10'} text-white  hover:text-purple-300 sub`}
           >
             <a href={`/${nav.id}`}>
               {nav.title}
@@ -36,7 +36,7 @@ const Navbar = () => {
           </li>
           
         ))}
-        <p className={`font-poppins font-nome cursor-pointer text-[16px] mr-0 text-white  hover:text-purple-300`}
+        <p className={`font-poppins font-nome cursor-pointer text-[16px] mr-0 text-white  hover:text-purple-300 sub`}
         onClick={() => openInNewTab('https://discord.gg/PV25tj6HTs')}>
           Suporte
         </p>
@@ -57,7 +57,7 @@ const Navbar = () => {
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-nome cursor-pointer text-[16px] ${index === navLinks.lenght - 1 ? 'mr-0' : 'mb-4'} text-white`}
+                className={`font-poppins font-nome cursor-pointer text-[16px] ${index === navLinks.lenght - 1 ? 'mr-0' : 'mb-4'} text-white sub`}
               >            
             <a href={`/${nav.id}`}>
               {nav.title}
@@ -65,7 +65,7 @@ const Navbar = () => {
 
           </li>
         ))}
-        <p className={`font-poppins font-nome cursor-pointer text-[16px] mr-0 text-white  hover:text-purple-300`}
+        <p className={`font-poppins font-nome cursor-pointer text-[16px] mr-0 text-white  hover:text-purple-300 sub`}
         onClick={() => openInNewTab('https://discord.gg/PV25tj6HTs')}>
           Suporte
         </p>

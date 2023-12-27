@@ -18,6 +18,24 @@
   scroll-behavior: smooth;
 }
 
+.sub {
+  background-image: linear-gradient(
+    transparent 0%,
+    transparent 90%,
+    #b86ceb 90%,
+    #b86ceb 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: right;
+  transition: background-size 300ms;
+}
+
+.sub:hover {
+  background-size: 100% 100%;
+  background-position-x: left;
+}
+
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
