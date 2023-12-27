@@ -24,7 +24,7 @@ const FeatureHomeRight = ({
             </p>
 
             <p className={`font-poppins font-normal text-dimWhite leading-[30.8px] mr-2 md:mr-8 md:py-6 py-1 flex flex-col justify-center` }>
-              <span className='md:text-lg sm:text-sm text-xs justify-between text-right'>{description}
+              <span className='md:text-lg sm:text-sm text-xs justify-between text-justify '>{description}
               </span>
               <span className='text-purple-400 text-right font-bold text-sm sm:text:lg md:text-xl cursor-pointer hover:underline hover:underline-offset-4 mb-4 md:mb-0'>
                 {clickText}

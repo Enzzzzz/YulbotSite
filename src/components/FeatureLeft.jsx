@@ -24,7 +24,7 @@ const FeatureHomeLeft = ({
                 </p>
     
                 <p className={`font-poppins font-normal text-dimWhite  leading-[30.8px] ml-2 md:ml-8 py-1 md:py-6 ss:text-sm flex flex-col justify-center` }>
-                  <span className='md:text-lg sm:text-sm text-xs justify-between'>
+                  <span className='md:text-lg sm:text-sm text-xs justify-between text-justify'>
                     {description} 
                   </span>
                   <span className='text-purple-400 font-bold text-sm sm:text:lg md:text-xl cursor-pointer hover:underline hover:underline-offset-4 mb-4 md:mb-0'

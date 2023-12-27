@@ -33,8 +33,8 @@ function Home() {
           />
 
           <FeatureHomeRight
-            title="Sistema de Level"
-            description="Sistema de level e rank global para todos os meus usuários ou apenas para o seu servidor! Converse com seus amigos e ganhem pontos de xp para subir de nível e liberar novos temas para o seu perfil ou até comandos."
+            title="Automatização"
+            description="Nunca foi tão facil administrar um servidor! Tudo feito de forma automática para que você, dono de servidor, não precise perder tempo com coisas pequenas ou até mais complexas. Deixe-me fazer todo o trabalho para você!"
             clickText="Saiba mais!"
             img="/up.png"
             path="level"
