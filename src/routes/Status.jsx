@@ -241,8 +241,8 @@ const yulSiteProgress =
               <h1 className="text-white text-lg mb-2 font-bold sm:text-lg md:text-xl lg:text-2xl xl:text-3xl pr-2 pl-2">
                 YulRPG
               </h1>
-              <div className="absolute top-7 right-4 bg-red-500 rounded-full w-12 h-6 flex items-center justify-center">
-                <p className="text-white text-xs font-bold">Offline</p>
+              <div className="absolute top-7 right-4 bg-gray-500 rounded-full w-12 h-6 flex items-center justify-center">
+                <p className="text-white text-xs font-bold">Paused</p>
               </div>
               <h2 className="text-white mb-2 pr-2 pl-2 font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 Criação do bot
