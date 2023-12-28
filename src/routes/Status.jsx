@@ -161,7 +161,7 @@ const yulSiteProgress =
           <Navbar />
         </div>
       </div>
-      <div className="sm:px-16 px-6 flex justify-center items-center">
+      <div className="sm:px-16 px-6  flex h-screen justify-center items-center">
         <div className="xl:max-w-[1280px] space-y-8 w-full">
           <div className="flex flex-col sm:flex-row justify-between mt-8 gap-10">
             {/* YulBot Bar */}

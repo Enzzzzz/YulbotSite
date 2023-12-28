@@ -24,7 +24,7 @@ const Main = () => (
       <div className='flex flex-row justify-between items-center w-full'>
         <h1 className='flex-1 font-poppins font-semibold ss:text-[68px] text-[48px] text-white ss:leading-[100px] leading-[68px]'>
         O mais<br className='sm:block hidden' /> {" "}
-        <span className='text-white'>Completo</span> {"  "}
+        <span className='text-white text-main'>Completo</span> {"  "}
         
         </h1>
         <div className='ss:flex hidden md:mr-4 m4-0'>

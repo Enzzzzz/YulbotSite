@@ -25,7 +25,7 @@ function Home() {
         <div className={`xl:max-w-[1280px] w-full`}>
           <FeatureHomeLeft
             title="Moderação"
-            description="Mutar, Remover e até Banir nunca foi tão fácil! Esses e muitos outros comandos para administrar seu servidor perfeitamente e com muita facilidade!"
+            description="Mutar, Remover e até Banir... Esses e muitos outros comandos para administrar seu servidor perfeitamente e com muita facilidade!"
             clickText="Veja os Comandos!"
             img="/direitoBranco.png"
             path="mod"

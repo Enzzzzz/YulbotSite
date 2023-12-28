@@ -39,12 +39,28 @@
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
-    #def9fa 0.89%,
-    #bef3f5 17.23%,
-    #9dedf0 42.04%,
-    #7de7eb 55.12%,
-    #5ce1e6 71.54%,
-    #33bbcf 100%
+    #f3e8fa 0.89%,
+    #e0bff5 17.23%,
+    #ca87f5 42.04%,
+    #c376f5 55.12%,
+    #b455f2 71.54%,
+    #a427f5 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.text-main {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #e5ccff 0.89%,
+    #cda2fa 17.23%,
+    #bd86f7 42.04%,
+    #a962f5 55.12%,
+    #9a41fa 71.54%,
+    #8a27f5 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
